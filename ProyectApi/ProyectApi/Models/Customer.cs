@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NewApi.Models
+namespace ApiRestBilling.Models
 {
     public class Customer
     {

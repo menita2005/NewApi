@@ -1,4 +1,4 @@
-namespace NewApi
+namespace ProyectApi
 {
     public class WeatherForecast
     {

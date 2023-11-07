@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace NewApi.Models
+namespace ApiRestBilling.Models
 {
     public class OrderItem
     {
@@ -11,13 +11,15 @@ namespace NewApi.Models
         public int OrderId { get; set; }
         [Required]
         public int ProductId { get; set; }
-        [Required]
-        public decimal UnitPrice { get; set; } = 0;
+       // [Required]
+        public decimal? UnitPrice { get; set; } = 0;
         [Required]
         public int Quantity { get; set; } = 1;
         [ForeignKey("OrderId")]
-        public Order Order { get; set; }
+        public Order? Order { get; set; }
         [ForeignKey("ProductId")]
-        public Product Product { get; set; }
+        public Product? Product { get; set; }
+
+        public decimal? Subtotal { get; set; } = 0;
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace NewApi.Models
+namespace ApiRestBilling.Models
 {
     public class Product
     {
@@ -17,7 +17,7 @@ namespace NewApi.Models
         public string Package { get; set; }
         public bool IsDiscontinued { get; set; } = false;
         [ForeignKey("SupplierId")]
-        public Supplier Supplier { get; set; }
+        public Supplier? Supplier { get; set; }
         public ICollection<OrderItem>? OrderItems { get; set; }
     }
 }
