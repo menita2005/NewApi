@@ -25,7 +25,8 @@ namespace ProyectApi.Controllers
         {
             if (_context.Customers == null)
             {
-                return NotFound();
+                return NotFound(); 
+
             }
 
             return await _context.Customers.ToListAsync();
